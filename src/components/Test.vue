@@ -1,6 +1,8 @@
 <template>
     <p>Hello {{name}}</p><br/>
     <input v-model="name">
+    <button v-on:click="clearName()">clear</button>
+    <button v-on:click="changeToUpperCase()">Caps On</button>
 </template>
 <script>
     export default{
@@ -8,6 +10,14 @@
         data(){
             return{
                 name:""
+            }
+        },
+        methods:{
+            clearName(){
+                this.name = "";
+            },
+            changeToUpperCase(){
+                this.name = this.name.toUpperCase();
             }
         }
     }
