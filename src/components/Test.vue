@@ -1,9 +1,15 @@
 <template>
-    <p>Pravin Testing</p>
+    <p>Hello {{name}}</p><br/>
+    <input v-model="name">
 </template>
 <script>
     export default{
-        name:'Test'
+        name:'Test',
+        data(){
+            return{
+                name:""
+            }
+        }
     }
 </script>
 
