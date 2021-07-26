@@ -10,10 +10,7 @@
     <label for="colorDropDown">Choose a color</label>
     <select v-model="selected" id="colorDropDown">
         <!-- inline object literal -->
-        <option v-bind:value="{ color: 'red' }">Red</option>
-        <option v-bind:value="{ color: 'blue' }">Blue</option>
-        <option v-bind:value="{ color: 'yellow' }">Yellow</option>
-        <option v-bind:value="{ color: 'black' }">Black</option>
+        <option v-for="(colr,index) in colors" v-bind:key="index" v-bind:value="{ color: colr }">{{colr}}</option>
     </select>
 </template>
 <script>
@@ -25,6 +22,7 @@
                 currentTime:"",
                 checkboxchecked:"",
                 selected: '',
+                colors:['red','blue','yellow','black'],
                 redtext:{
                     color: 'red'
                 },
