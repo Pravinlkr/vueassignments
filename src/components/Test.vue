@@ -15,7 +15,7 @@
             }
         },
         created(){
-            this.currentTime = new Date();
+            this.currentTime = new Date().toLocaleString();
         },
         methods:{
             clearName(){
@@ -28,7 +28,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped>            
 p{
     text-align: center;
 }
